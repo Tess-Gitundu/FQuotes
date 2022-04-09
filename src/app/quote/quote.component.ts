@@ -14,6 +14,9 @@ export class QuoteComponent implements OnInit {
     new Quote (0, 'hello', 'april', 'wanja', 0, 0, new Date(2022,1,12))
   ];
 
+  arr: number[] = this.quotes.map(quote=>quote.upvote)
+  highest = Math.max(...this.arr)
+
   addNewQuote(quote: any) {
     let quoteLength = this.quotes.length;
     quote.id = quoteLength + 1;
