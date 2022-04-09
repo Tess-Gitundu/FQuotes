@@ -4,7 +4,7 @@
     <ul>
         <div *ngFor="let quote of quotes; let i = index">
         <li>
-            <h2> " {{ quote.quote }} "</h2>
+            <h2> " {{ quote.quote }} created on {{quote.dateCreated | date}} "</h2>
             <button class="btn btn-warning" (click)="addLikes(i)">Likes : {{ quote.upvote }}</button>&nbsp;&nbsp;
             <button class="btn btn-primary"(click)="addMeeh">Meeh : {{ quote.downvote }}</button> <br>
             <button type="button" class="btn btn-info mt-2" (click)='showDetails(i)' >Show More</button>
