@@ -1,15 +1,18 @@
 <div>
-    <h1>Funny Quotes</h1>
-    <hr>
-    <ul>
-        <div *ngFor="let quote of quotes; let i = index">
-        <li>
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Funny Quotes</h1>
+            <hr>
+            <div *ngFor="let quote of quotes; let i = index">
             <h2> " {{ quote.quote }} created on {{quote.dateCreated | dateCount}} "</h2>
             <button class="btn btn-warning" (click)="addLikes(i)">Likes : {{ quote.upvote }}</button>&nbsp;&nbsp;
             <button class="btn btn-primary"(click)="addMeeh(i)">Meeh : {{ quote.downvote }}</button> <br>
             <button type="button" class="btn btn-info mt-2" (click)='showDetails(i)' >Show More</button>
             <app-quote-details *ngIf="quote.showDetails" [quote]="quote" (isComplete)="deleteQuote($event, i)" ></app-quote-details>
-        </li>
+            </div>
         </div>
-    </ul>
+        <div class="col-md-6">
+            <app-form></app-form>
+        </div>
+    </div>
 </div>
