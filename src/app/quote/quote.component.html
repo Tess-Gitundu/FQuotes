@@ -4,11 +4,11 @@
     <ul>
         <div *ngFor="let quote of quotes; let i = index">
         <li>
-            <h2> " {{ quote.quote }} created on {{quote.dateCreated | date}} "</h2>
+            <h2> " {{ quote.quote }} created on {{quote.dateCreated | dateCount}} "</h2>
             <button class="btn btn-warning" (click)="addLikes(i)">Likes : {{ quote.upvote }}</button>&nbsp;&nbsp;
-            <button class="btn btn-primary"(click)="addMeeh">Meeh : {{ quote.downvote }}</button> <br>
+            <button class="btn btn-primary"(click)="addMeeh(i)">Meeh : {{ quote.downvote }}</button> <br>
             <button type="button" class="btn btn-info mt-2" (click)='showDetails(i)' >Show More</button>
-            <app-quote-details *ngIf="quote.showDetails" [quote]="quote" (isComplete)="completeQuote($event, i)" ></app-quote-details>
+            <app-quote-details *ngIf="quote.showDetails" [quote]="quote" (isComplete)="deleteQuote($event, i)" ></app-quote-details>
         </li>
         </div>
     </ul>
