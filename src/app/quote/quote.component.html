@@ -2,8 +2,14 @@
     <h1>Funny Quotes</h1>
     <hr>
     <ul>
-        <li *ngFor="let quote of quotes">
-            {{quote.quote}}
+        <div *ngFor="let quote of quotes; let i = index">
+        <li>
+            <h2> " {{ quote.quote }} "</h2>
+            <p>Likes : {{ quote.upvote }}</p>
+            <p>Meeh : {{ quote.downvote }}</p>
+            <button type="button" class="btn btn-info" (click)='showDetails(i)' >Show More</button>
+            <app-quote-details *ngIf="quote.showDetails" [quote]="quote"></app-quote-details>
         </li>
+        </div>
     </ul>
 </div>

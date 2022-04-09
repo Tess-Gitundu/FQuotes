@@ -9,10 +9,14 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes: Quote[] = [
-    {id: 1, quote: 'hello', author: 'tess', name: 'njeri', upvote: 0, downvote:0},
-    {id: 2, quote: 'hello', author: 'june', name: 'mary', upvote: 0, downvote:0},
-    {id: 3, quote: 'hello', author: 'april', name: 'wanja', upvote: 0, downvote:0}
-  ]
+   new Quote (1,'hello', 'tess', 'njeri', 0, 0,),
+   new Quote (2, 'hello', 'june', 'mary', 0, 0),
+    new Quote (3, 'hello', 'april', 'wanja', 0, 0)
+  ];
+
+  showDetails(index: number) {
+    this.quotes[index].showDetails = !this.quotes[index].showDetails;
+  }
 
   constructor() { }
 
