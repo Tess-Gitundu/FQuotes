@@ -8,7 +8,7 @@ import { Quote } from '../quote';
 export class FormComponent implements OnInit {
   
   newQuote = new Quote (0, "", "", "", 0, 0, new Date());
-  @Output() addGoal = new EventEmitter
+  @Output() addQuote = new EventEmitter
 
   submitQuote() {
     this.addQuote.emit(this.newQuote)
