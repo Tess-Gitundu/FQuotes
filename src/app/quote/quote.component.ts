@@ -10,8 +10,8 @@ export class QuoteComponent implements OnInit {
 
   quotes: Quote[] = [
    new Quote (1,'hello', 'tess', 'njeri', 0, 0, new Date(2022,1,12)),
-   new Quote (2, 'hello', 'june', 'mary', 0, 0, new Date(2022,1,12)),
-    new Quote (3, 'hello', 'april', 'wanja', 0, 0, new Date(2022,1,12))
+   new Quote (0, 'hello', 'june', 'mary', 0, 0, new Date(2022,1,12)),
+    new Quote (0, 'hello', 'april', 'wanja', 0, 0, new Date(2022,1,12))
   ];
 
   addNewQuote(quote: any) {
