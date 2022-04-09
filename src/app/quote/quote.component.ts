@@ -14,6 +14,13 @@ export class QuoteComponent implements OnInit {
     new Quote (3, 'hello', 'april', 'wanja', 0, 0, new Date(2022,1,12))
   ];
 
+  addNewQuote(quote: any) {
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength + 1;
+    quote.completeDate = new Date(quote.completeDate)
+    this.quotes.push(quote)
+  }
+
   addLikes(index: number) {
     this.quotes[index].upvote++;
   }
