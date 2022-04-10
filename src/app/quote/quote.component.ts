@@ -9,9 +9,9 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes: Quote[] = [
-   new Quote (0,'People say nothing is impossible, but I do nothing everyday.', 'A.A. Milne', 'Tess', 0, 0, new Date(2022,1,12)),
-   new Quote (1, 'I try not to laugh at my own jokes, but we all know I am hilarious.', 'Love Mary', 'Angel', 0, 0, new Date(2022,1,12)),
-    new Quote (2, 'I am sick of following my dreams, man. I am just going to ask where they are going and hook up with them later.', 'Mitch Hero', 'Rose Flower', 0, 0, new Date(2022,1,12))
+   new Quote (0,'People say nothing is impossible, but I do nothing everyday.', 'A.A. Milne', 'Tess', 0, 0, new Date(2022,3,8)),
+   new Quote (1, 'I try not to laugh at my own jokes, but we all know I am hilarious.', 'Love Mary', 'Angel', 0, 0, new Date(2022,3,4)),
+    new Quote (2, 'I am sick of following my dreams, man. I am just going to ask where they are going and hook up with them later.', 'Mitch Hero', 'Rose Flower', 0, 0, new Date(2022,3,1))
   ];
 
   preNum!:number
