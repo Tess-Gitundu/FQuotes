@@ -14,6 +14,21 @@ export class QuoteComponent implements OnInit {
     new Quote (0, 'hello', 'april', 'wanja', 0, 0, new Date(2022,1,12))
   ];
 
+  preNum!:number
+  lastNum!:number
+  counter!:number
+
+  highestVote(){
+    this.preNum = 0
+    this.lastNum = 0
+
+    for(this.counter=0 ; this.counter < this.quotes.length; this.counter++) {
+      this.lastNum = this.quotes[this.counter].upvote;
+      if(this.lastNum > this.preNum){this.preNum = this.lastNum}
+    }
+    return  this.preNum
+  }
+
   arr: number[] = this.quotes.map(quote=>quote.upvote)
   highest = Math.max(...this.arr)
 

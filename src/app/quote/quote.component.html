@@ -5,7 +5,7 @@
       <hr>
       <ul>
         <div *ngFor="let quote of quotes; let i = index">
-          <div *ngIf="quote.upvote == highest && quote.upvote>0; then highlight; else empty"></div>
+          <div *ngIf="quote.upvote == highestVote() && quote.upvote>0; then highlight; else empty"></div>
           <ng-template #highlight>
             <li appHighlight>
               <h2>" {{ quote.quote }} {{ quote.dateCreated | dateCount }} "</h2>

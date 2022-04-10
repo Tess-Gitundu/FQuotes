@@ -1,7 +1,7 @@
 <div class="container">
     <h1 class="text-center">Add a Quote</h1>
     <hr>
-    <form (ngSubmit)="submitQuote()" #quoteForm = 'ngForm'>
+    <form (ngSubmit)="submitQuote() ;quoteForm.resetForm({})" #quoteForm = 'ngForm'>
         <div class="form-group">
             <label for="quote">Quote</label>
             <textarea class="form-control" id="Quote" [(ngModel)]="newQuote.quote" #quote='ngModel' name="quote" rows="3" required></textarea>
